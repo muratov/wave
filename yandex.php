@@ -4,9 +4,10 @@ class yandex {
 	const maxPages = 20;
 
 	private $page = 0;
-	public $localRegion = -1;
-	public $query = '';
-	public $depth;
+
+	private $localRegion = -1;
+	private $query = '';
+	private $depth;
 
 
 	public function __construct($q, $lr = 2, $d = 1) {

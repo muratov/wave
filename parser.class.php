@@ -9,8 +9,7 @@ include_once 'phpQuery-onefile.php';
 			phpQuery::newDocumentFileHTML($url);
 			$this->title = pq('title')->html();
 			//$this->title = $this->titleElement;
-
-			return $this->title;
+			$this->title;
 
 		}
 
