@@ -4,11 +4,10 @@
 	require_once 'parser.class.php';
 
 
-	$test = new yandex("всем привет",2,5);
+	$test = new yandex("hello world",2,5);
 	echo $test->getParseURL();
 	$test2 = new SEParser($test->getParseURL());
-	echo ($test2->title);
-
+	echo $test2->title;
 
 
 ?>

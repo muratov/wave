@@ -27,7 +27,7 @@ class yandex {
 	}
 
 	public function getParseURL() {
-		return $this->URL.'text='.urlencode($this->query).'&lr='.$this->localRegion.'&p='.$this->page;
+		return $this->URL.'text='.urlencode($this->query).'&lr='.$this->localRegion.'&p='.$this->page.'&numdoc=10';
 	}
 
 
