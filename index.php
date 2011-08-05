@@ -19,12 +19,13 @@ echo "<br/><br/>";
 
 $test2 = new SEParser($test->getParseURLs());
 
-if ($test2->parsePage('#results li','.snippet_title','.b-captcha__layout')==false) {
+/*if ($test2->parsePage('#results li','.snippet_title','.b-captcha__layout')==false) {
     echo 'captcha';
 
-};
+};*/
 
 $i = 0;
+print_r($test2->parsePage('#results li','.snippet_title','.b-captcha__layout')->getItems());
 foreach ($test2->titles as $title) {
     echo '<a href=' . $test2->urls[$i] . '>' . $title . '</a> - ' . $test2->clearURLs[$i++] . '<br/>';
 }

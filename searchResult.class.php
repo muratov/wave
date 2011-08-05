@@ -10,6 +10,15 @@ class searchResult {
 		//array_push($this->position,$position);
 	}
 
+    public function getItems(){
+        $result = array(
+            $urls=array(),
+            $titles = array()
+        );
+        $result['urls']=$this->url;
+        $result['titles']=$this->title;
+        return $result;
+    }
 }
 
 ?>
