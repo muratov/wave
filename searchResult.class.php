@@ -15,17 +15,6 @@ class searchResult {
     }
 
     public function getItems() {
-        /*$result = array(
-            $urls = array(),
-            $titles = array(),
-            $clearURLs = array(),
-            $position = array()
-        );
-        $result['urls'] = $this->url;
-        $result['titles'] = $this->title;
-        $result['clearURLs'] = $this->clear;
-        $result['position'] = $this->position;*/
-
         return $this;
     }
 }

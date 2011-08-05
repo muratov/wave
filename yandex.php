@@ -22,9 +22,9 @@ class yandex {
         $this->depth = $d;
     }
 
-    public function getParseURLs() {
+    public function getParseURLs($start=0) {
 
-        for ($i = 0; $i < $this->depth; $i++) {
+        for ($i = $start; $i < $this->depth; $i++) {
             array_push($this->URLsArray, $this->URL . 'text=' . urlencode($this->query) . '&lr=' . $this->localRegion . '&p=' . $i . '&numdoc=' . RESULTSPERPAGE);
         }
         return $this->URLsArray;
