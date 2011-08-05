@@ -11,6 +11,7 @@ $yandexParser = new SEParser($yandexQuest->getParseURLs());
 $test = $yandexParser->parsePage($yandexQuest->resultClass, $yandexQuest->hrefClass, $yandexQuest->captchClass);
 if ($test == false) {
     echo 'captcha or Error';
+    echo $yandexParser->stopPage;
 
 } else {
     echo "<br/><br/>";
@@ -34,8 +35,9 @@ $nigmaParser = new SEParser($nigmaQuest->getParseURLs());
 $test2 = $nigmaParser->parsePage($nigmaQuest->resultClass, $nigmaQuest->hrefClass, $nigmaQuest->captchClass);
 if ($test2 == false) {
     echo 'captcha or Error';
-
+    echo $nigmaParser->stopPage;
 } else {
+    echo $nigmaParser->isSuccess();
     echo "<br/><br/>";
     $i = 0;
     $nigmaResults = $test2->getItems();
