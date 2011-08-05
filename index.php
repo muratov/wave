@@ -8,9 +8,9 @@ isset($_GET['q']) ? $yandexQuest = new yandex($_GET['q'], 1) : $yandexQuest = ne
 echo "<br/><br/>";
 
 $yandexParser = new SEParser($yandexQuest->getParseURLs());
-$test = $yandexParser->parsePage('.b-serp-item','.b-serp-item__title-link','.b-captcha__layout');
+$test = $yandexParser->parsePage($yandexQuest->resultClass, $yandexQuest->hrefClass, $yandexQuest->captchClass);
 if ($test == false) {
-    echo 'captcha';
+    echo 'captcha or Error';
 
 } else {
     echo "<br/><br/>";
@@ -31,9 +31,9 @@ isset($_GET['q']) ? $nigmaQuest = new nigma($_GET['q'], 1) : $nigmaQuest = new n
 echo "<br/><br/>";
 
 $nigmaParser = new SEParser($nigmaQuest->getParseURLs());
-$test2 = $nigmaParser->parsePage('#results li', '.snippet_title', '.b-captcha__layout');
+$test2 = $nigmaParser->parsePage($nigmaQuest->resultClass, $nigmaQuest->hrefClass, $nigmaQuest->captchClass);
 if ($test2 == false) {
-    echo 'captcha';
+    echo 'captcha or Error';
 
 } else {
     echo "<br/><br/>";

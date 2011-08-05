@@ -3,8 +3,10 @@
 	define('MAXPAGES', 20);
 	class nigma {
 		private $URL = "http://nigma.ru/?";
-
-
+        var $resultClass = '#results li';
+        var $hrefClass = '.snippet_title';
+        var $captchClass = '.b-captcha__layout';
+        
 		private $page = 0;
 
 		private $query = '';
