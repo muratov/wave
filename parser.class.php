@@ -2,9 +2,9 @@
 include_once 'phpQuery-onefile.php';
 require_once 'searchResult.class.php';
 class SEParser {
-    var $titles = array();
+/*    var $titles = array();
     var $urls = array();
-    var $clearURLs = array();
+    var $clearURLs = array();*/
     private $targetUrl;
 
 
@@ -22,8 +22,9 @@ class SEParser {
 
                 $results = pq($resultClass);
                 foreach ($results as $li) {
-                    array_push($this->titles, pq($li)->find($hrefClass)->text());
+ /*                   array_push($this->titles, pq($li)->find($hrefClass)->text());
                     array_push($this->urls, pq($li)->find("a")->attr("href"));
+ */
 
                     $searchResult->addItem(pq($li)->find("a")->attr("href"), pq($li)->find($hrefClass)->text());
                 }
@@ -32,9 +33,9 @@ class SEParser {
         return $searchResult;
     }
 
-    public function getClearURLs() {
-        array_push($this->clearURLs, parse_url($this->urls, PHP_URL_HOST));
-    }
+/*    public function getClearURLs() {
+        //array_push($this->clearURLs, parse_url($this->urls, PHP_URL_HOST));
+    }*/
 
 
 }
