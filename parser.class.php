@@ -16,7 +16,7 @@ include_once 'phpQuery-onefile.php';
 				phpQuery::newDocumentFileHTML($url);
 				//$results = pq('.b-serp-item');
 				if (pq('.b-captcha__layout')) {
-					echo '<img src="' . pq('.b-captcha__layout img')->attr('src') . '"/>';
+					echo '<img src="' . pq('.b-captcha___layout img')->attr('src') . '"/>';
 				}
 
 				$results = pq($resultClass);
