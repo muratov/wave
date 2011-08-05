@@ -4,7 +4,7 @@ class searchResult {
     var $title = array();
     var $position = array();
     var $clear = array();
-    private $current = 0;
+    private $current = 1;
 
     public function addItem($url, $title) {
         array_push($this->url, $url);

@@ -30,12 +30,13 @@ class SEParser {
 
     }
 
-    public function isSuccess() {
-        if (count($this->targetUrl) == $this->stopPage) {
-            return true;
+    public function fail() {
+        if (count($this->targetUrl) != $this->stopPage) {
+            return $this->stopPage;
+
         } else {
-            return false;
-        }
+            return -1;
+       }
 
     }
 
