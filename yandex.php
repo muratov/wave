@@ -8,9 +8,6 @@
 		var $hrefClass = '.b-serp-item__title-link';
 		var $captchClass = '.b-captcha__layout';
 
-
-		private $page = 0;
-
 		private $localRegion = -1;
 		private $query = '';
 		private $depth;
